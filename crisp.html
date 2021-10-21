@@ -23,8 +23,10 @@
                         <h5 class="card-text">Name: <small>Burger</small></h5>
                         <h5 class="card-text">Crust: <small>Crispy</small></h5>
                         <h5 class="card-text">Price: <small>$30</small></h5>
-                        <input type="text" class="form-control" placeholder="customer name...">
-                        <input type="text" class="form-control mt-2" placeholder="phone number...">
+                        <!-- Form -->
+                    <form id="form">
+                        <input type="text" id="name" class="form-control" placeholder="customer name...">
+                        <input type="text" id="phone" class="form-control mt-2" placeholder="phone number...">
                     </div>
                 </div>
                 <div class="col">
@@ -40,12 +42,16 @@
                             <option value="2">Medium</option>
                             <option value="2">Large</option>
                         </select>
-                        <button class="btn btn-success mt-3">Order</button>
+                        <button id="btn" type="submit" class="btn btn-success mt-3">Order</button>
+                    </form>
+                    <!-- End of form -->
                     </div>
                 </div>
                 </div>
             </div>
         </div>
       </div>
+
+      <script src="app.js"></script>
 </body>
 </html>
