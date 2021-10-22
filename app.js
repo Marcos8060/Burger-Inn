@@ -8,9 +8,10 @@ const locationInput = document.getElementById('location');
 const quantityInput = document.getElementById('quantity');
 const deliverInput = document.getElementById('deliver');
 const sizeInput = document.getElementById('size');
-const priceBtn = document.getElementById('price');
+const checkout = document.getElementById('checkout');
 
 // add event
+checkout.addEventListener('click',getTotals);
 form.addEventListener('submit',getName);
 
 // execute function
@@ -41,11 +42,17 @@ function getName(e){
    if(deliverInput.value == 'Deliver'){
       // show modal alert
       ui.showOrders(nameInput.value,phoneInput.value,
-         locationInput.value,quantityInput.value,
-         ` Deliver: <input type="text" id="destination" class="form-control" placeholder="choose a location...">`,
+         locationInput.value,quantityInput.value,deliverInput.value,
          sizeInput.value,(10 * quantityInput.value));
    }
 
  e.preventDefault();
+}
+
+// get checkout totals
+function getTotals(e){
+//  show checkout totals alert
+    ui.showAlert('hello world', 'alert alert-danger')
+   e.preventDefault();
 }
 
