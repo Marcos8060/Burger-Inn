@@ -8,7 +8,7 @@ const locationInput = document.getElementById('location');
 const quantityInput = document.getElementById('quantity');
 const deliverInput = document.getElementById('deliver');
 const sizeInput = document.getElementById('size');
-// const Btn = document.getElementById('btn');
+const priceBtn = document.getElementById('price');
 
 // add event
 form.addEventListener('submit',getName);
@@ -22,12 +22,21 @@ function getName(e){
     //   show orders
      ui.showOrders(nameInput.value,phoneInput.value,
                    locationInput.value,quantityInput.value,
-                   deliverInput.value,sizeInput.value);
+                   deliverInput.value,sizeInput.value,(10 * quantityInput.value));
    }
-  
-//    prices for the individual sizes
-    
 
+//    price for medium size
+   if(sizeInput.value == 'Medium'){
+    ui.showOrders(nameInput.value,phoneInput.value,
+        locationInput.value,quantityInput.value,
+        deliverInput.value,sizeInput.value,(14 * quantityInput.value));
+   }
+// price for large size
+   if(sizeInput.value == 'Large'){
+    ui.showOrders(nameInput.value,phoneInput.value,
+        locationInput.value,quantityInput.value,
+        deliverInput.value,sizeInput.value,(18 * quantityInput.value));
+   }
 
  e.preventDefault();
 }

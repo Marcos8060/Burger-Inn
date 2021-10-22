@@ -1,9 +1,10 @@
 class UI {
-    constructor(){
-     this.orders = document.getElementById('orders');
+    constructor() {
+        this.orders = document.getElementById('orders');
+        this.price = document.getElementById('price');
     }
 
-    showOrders(name,phone,location,quantity,deliver,size){
+    showOrders(name, phone, location, quantity, deliver, size, price) {
         this.orders.innerHTML = `
         <div class="row">
           <div class="col border-right">
@@ -16,11 +17,13 @@ class UI {
             <h6>Status: ${deliver}</h6>
             <h6>Size: ${size}</h6>
           </div>
+          <button id="price" class="btn btn-success text-center mb-2">$${price}<button>
         </div>
         `
         let myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {});
-          myModal.show();
+        myModal.show();
     }
-   
+
 };
+
 
