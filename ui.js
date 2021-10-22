@@ -1,7 +1,7 @@
 class UI {
     constructor() {
         this.orders = document.getElementById('orders');
-        this.price = document.getElementById('price');
+        this.alert = document.getElementById('alert');
     }
 
     showOrders(name, phone, location, quantity, deliver, size, price) {

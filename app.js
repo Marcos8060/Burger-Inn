@@ -38,6 +38,14 @@ function getName(e){
         deliverInput.value,sizeInput.value,(18 * quantityInput.value));
    }
 
+   if(deliverInput.value == 'Deliver'){
+      // show modal alert
+      ui.showOrders(nameInput.value,phoneInput.value,
+         locationInput.value,quantityInput.value,
+         ` Deliver: <input type="text" id="destination" class="form-control" placeholder="choose a location...">`,
+         sizeInput.value,(10 * quantityInput.value));
+   }
+
  e.preventDefault();
 }
 
