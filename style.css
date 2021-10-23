@@ -20,6 +20,10 @@ body{
 .hero_section nav ul li a:hover{
   color: white;
 }
+.eat{
+  height: 300px;
+  width: 400px;
+}
 .waiter{
   height: 80px;
 }
