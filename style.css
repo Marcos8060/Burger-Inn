@@ -200,9 +200,19 @@ label #btn,#remove{
   border: 0;
   height: 40px;
   text-transform: uppercase;
-  width: 120px;
+  width: 140px;
   border-radius: 20px;
 }
+.modal-body{
+  background-color: #FDF6F0;
+}
+.modal-header{
+  background-color: #FDF6F0;
+}
+.modal-content{
+  color: black
+}
+
 /* contact section */
 .contact_section{
   background-color: #FCFBF9;
@@ -245,8 +255,27 @@ label #btn,#remove{
 }
 textarea{
   outline: 0;
+  width: 100%;
   border: 1px solid gray;
   border-radius: 5px;
+}
+/* footer section */
+.footer_section{
+  background-color: #FDF6F0;
+  height: 50vh;
+}
+.foot{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+.copy{
+  text-align: center;
+  margin-top: 50px;
+}
+.ready{
+  margin-left: 20px;
+  margin-bottom: 40px;
 }
 /* media querries */
 @media (max-width: 860px) {
