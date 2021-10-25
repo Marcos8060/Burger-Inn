@@ -1,3 +1,6 @@
+// init ui
+const ui = new UI;
+
 // get input fields
 const locationInput = document.getElementById('location');
 // quantity
@@ -14,12 +17,79 @@ const topping2 = document.getElementById('top2');
 const topping3 = document.getElementById('top3');
 
 // add event
-form.addEventListener('submit',getName);
+form.addEventListener('submit',getGlobalPrice);
 
-function getName(e){
+function getGlobalPrice(e){
 
-   console.log(sizeInput1.value);
+   // price for  global quantity
+   if(quantityInput1.value !== '' || quantityInput2.value !== '' || quantityInput3.value !== ''){
+      // show prices
 
+      ui.showPrice((quantityInput1.value * 10)+ (quantityInput2.value * 10)+ 
+                   (quantityInput3.value * 10),quantityInput1.value,
+                   quantityInput2.value,quantityInput3.value);
+
+   //  get different sizes
+   if(sizeInput1.value !== '' || sizeInput2.value !== '' || sizeInput3.value !== ''){
+      ui.showPrice((quantityInput1.value * 10)+ (quantityInput2.value * 10)
+                    + (quantityInput3.value * 10),quantityInput1.value,quantityInput2.value,
+                    quantityInput3.value,sizeInput1.value,sizeInput2.value,sizeInput3.value);
+   }
+   // get different toppings
+    if(topping1.value !== '' || topping2.value !== '' || topping3.value !== ''){
+      ui.showPrice((quantityInput1.value * 10)+ (quantityInput2.value * 10)
+                  + (quantityInput3.value * 10),quantityInput1.value,quantityInput2.value,
+                  quantityInput3.value,sizeInput1.value,sizeInput2.value,sizeInput3.value,
+                  topping1.value,topping2.value,topping3.value);
+    }
+   //  get price for medium size(Input1)
+   if(sizeInput1.value == 'medium'){
+      ui.showPrice((quantityInput1.value * 15)+ (quantityInput2.value * 15)
+                  + (quantityInput3.value * 15),quantityInput1.value,quantityInput2.value,
+                  quantityInput3.value,sizeInput1.value,sizeInput2.value,sizeInput3.value,
+                  topping1.value,topping2.value,topping3.value,);
+   }
+   // get price for large size(input1)
+   if(sizeInput1.value == 'large'){
+      ui.showPrice((quantityInput1.value * 18)+ (quantityInput2.value * 18)
+                  + (quantityInput3.value * 18),quantityInput1.value,quantityInput2.value,
+                  quantityInput3.value,sizeInput1.value,sizeInput2.value,sizeInput3.value,
+                  topping1.value,topping2.value,topping3.value,);
+   }
+   // get price for medium size(input2)
+   if(sizeInput2.value == 'medium'){
+      ui.showPrice((quantityInput1.value * 15)+ (quantityInput2.value * 15)
+                  + (quantityInput3.value * 15),quantityInput1.value,quantityInput2.value,
+                  quantityInput3.value,sizeInput1.value,sizeInput2.value,sizeInput3.value,
+                  topping1.value,topping2.value,topping3.value,);
+   }
+   // get price for large size(input2)
+   if(sizeInput2.value == 'large'){
+      ui.showPrice((quantityInput1.value * 18)+ (quantityInput2.value * 18)
+                  + (quantityInput3.value * 18),quantityInput1.value,quantityInput2.value,
+                  quantityInput3.value,sizeInput1.value,sizeInput2.value,sizeInput3.value,
+                  topping1.value,topping2.value,topping3.value,);
+   }
+   // get price for medium size(input3)
+   if(sizeInput3.value == 'medium'){
+      ui.showPrice((quantityInput1.value * 15)+ (quantityInput2.value * 15)
+                  + (quantityInput3.value * 15),quantityInput1.value,quantityInput2.value,
+                  quantityInput3.value,sizeInput1.value,sizeInput2.value,sizeInput3.value,
+                  topping1.value,topping2.value,topping3.value,);
+   }
+   // get price for large size(input3)
+   if(sizeInput3.value == 'large'){
+      ui.showPrice((quantityInput1.value * 18)+ (quantityInput2.value * 18)
+                  + (quantityInput3.value * 18),quantityInput1.value,quantityInput2.value,
+                  quantityInput3.value,sizeInput1.value,sizeInput2.value,sizeInput3.value,
+                  topping1.value,topping2.value,topping3.value,);
+   }
+   if(locationInput.value !== ''){
+      ui.showPrice((quantityInput1.value * 18)+ (quantityInput2.value * 18)
+      + (quantityInput3.value * 18),quantityInput1.value,quantityInput2.value,
+      quantityInput3.value,sizeInput1.value,sizeInput2.value,sizeInput3.value,
+      topping1.value,topping2.value,topping3.value,locationInput.value);
+   }
    e.preventDefault();
 }
 
@@ -82,4 +152,4 @@ function getName(e){
 // }
 
 
-
+}

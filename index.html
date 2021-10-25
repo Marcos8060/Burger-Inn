@@ -133,19 +133,10 @@
                                      <img src="./Images/Img2.jpg" class="card-img-top" alt="...">
                                       <div class="card-body">
                                        <h5 class="card-title">Crispy</h5>
-                                       <input type="text" id="quantity1" placeholder="Qty..." class="form-control mt-3">
                                        <form id="form">
-                                        <select id="size1" class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                            <option>Small</option>
-                                            <option>Medium</option>
-                                            <option>Large</option>
-                                        </select>
-                                        <select id="top1" class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                            <option>Pepperoni</option>
-                                            <option>Mushrooms</option>
-                                            <option>Bacon</option>
-                                            <option>Sausage</option>
-                                        </select>
+                                        <input type="text" id="quantity1" placeholder="Qty..." class="form-control mt-3">
+                                        <input type="text" id="size1" placeholder="small,medium,large..." class="form-control mt-3">
+                                        <input type="text" id="top1" placeholder="mushroom,Bacon,Pepperoni..." class="form-control mt-3">
                                      </div>
                                     </div>
                                  </div>
@@ -157,17 +148,8 @@
                                       <div class="card-body">
                                        <h5 class="card-title">Stuffed</h5>
                                        <input type="text" id="quantity2" placeholder="Qty..." class="form-control mt-3">
-                                        <select id="size2" class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                            <option>Small</option>
-                                            <option>Medium</option>
-                                            <option>Large</option>
-                                        </select>
-                                        <select id="top2" class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                            <option>Pepperoni</option>
-                                            <option>Mushrooms</option>
-                                            <option>Bacon</option>
-                                            <option>Sausage</option>
-                                        </select>
+                                       <input type="text" id="size2" placeholder="small,medium,large..." class="form-control mt-3">
+                                       <input type="text" id="top2" placeholder="mushroom,Bacon,Pepperoni..." class="form-control mt-3">
                                      </div>
                                     </div>
                                  </div>
@@ -179,24 +161,16 @@
                                       <div class="card-body">
                                        <h5 class="card-title">Gluten Free</h5>
                                        <input type="text" id="quantity3" placeholder="Qty..." class="form-control">
-                                        <select id="size3" class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                            <option>Small</option>
-                                            <option>Medium</option>
-                                            <option>Large</option>
-                                        </select>
-                                        <select id="top3" class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                            <option>Pepperoni</option>
-                                            <option>Mushrooms</option>
-                                            <option>Bacon</option>
-                                            <option>Sausage</option>
-                                        </select>
-                                       
+                                        <input type="text" id="size3" placeholder="small,medium,large..." class="form-control mt-3">
+                                        <input type="text" id="top3" placeholder="mushroom,Bacon,Pepperoni..." class="form-control mt-3">
                                      </div>
                                     </div>
                                  </div>
                             </div>
                         </div>
                         <input type="text" id="location" class="form-control mt-3" placeholder="Enter Location...">
+                        <div id="qTotals"></div>
+                        <div id="sTotals"></div>
                         <button type="submit" class="mt-3">Complete Order</button>
                        </form>
                     </div>
