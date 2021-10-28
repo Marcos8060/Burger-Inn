@@ -3,6 +3,8 @@ class UI {
       this.productsContainer = document.querySelector('.products');
       this.cartItems = document.querySelector('.cartItems');
       this.subTotal = document.querySelector('.subtotal');
+      this.summary = document.querySelector('.summary');
+      this.summaryTotals = document.querySelector('.total');
    }
 
     displayProducts(imgSrc,title,price,size,topping,id){
@@ -44,8 +46,21 @@ class UI {
     }
     getSubTotal(totalprice,totalUnits){
        this.subTotal.innerHTML = `
-         Subtotal (${totalUnits} items): $${totalprice}
+         SUBTOTAL (${totalUnits} items): $${totalprice}
        
        `
+    }
+    appendToSummary(title,size,price,numberOfUnits,totalprice){
+       this.summary.innerHTML += `
+       <div>
+           <h6>Item: ${title}</h6>
+           <h6>Size: ${size}</h6>
+           <h6>Price: $${price}<h6>
+           <h6>Number of units: ${numberOfUnits}</h6>
+        </div>
+       `
+    }
+    appendTotals(totalUnits,totalprice){
+       this.summaryTotals.innerHTML = `SUBTOTAL (${totalUnits} items): $${totalprice}`;
     }
 }

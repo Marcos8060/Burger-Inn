@@ -8,6 +8,7 @@ products.forEach((product)=>{
    ui.displayProducts(product.imgSrc,product.title,product.price,product.size,product.topping,product.id);
 })
 
+
 // Add  to cart function
 let cart = [];
 function addToCart(id){
@@ -28,6 +29,8 @@ function addToCart(id){
 // update cart function
 function updateCart(){
    appendToCart();
+   showSummary();
+   appendSummaryTotals();
    subTotal();
 }
 
@@ -48,6 +51,21 @@ function appendToCart(){
    cart.forEach((item)=>{
       ui.appendToCart(item.imgSrc,item.title,item.size,item.price,item.id,item.numberOfUnits);
    })
+}
+// summary function
+function showSummary(){
+   ui.summary.innerHTML = "";
+   cart.forEach((item)=>{
+      ui.appendToSummary(item.title,item.size,item.price,item.numberOfUnits,item.totalprice);
+   })
+}
+function appendSummaryTotals(){
+   let totalprice = 0, totalUnits = 0;
+   cart.forEach((item)=>{
+    totalprice += item.price * item.numberOfUnits;
+    totalUnits += item.numberOfUnits;
+  })
+  ui.appendTotals(totalUnits,totalprice);
 }
 // change number of units
 function changeNumberOfUnits(action,id){
