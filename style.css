@@ -5,72 +5,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+.button{
+  background-color: #b6792a;
+  color: white;
+  padding: 3px;
+  margin-top: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+i{
+  cursor:pointer
+}
 .hero_section{
   background-color: #FDF6F0;
   height: 110vh;
 }
-nav{
-  height: 80px;
-  /* background-color: #b6792a; */
-  margin-bottom: 80px;
-  width: 100%;
-}
-nav ul{
-  float: right;
-  margin-right: 25px;
-}
-nav ul i{
-  color: #FAA12F;
-  cursor: pointer;
-}
-nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 15px;
-}
-.hero_section nav ul li a{
-  color: white;
-}
-nav ul li a{
-  position: relative;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-family: montserrat;
-  color: #f1f5f8;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-nav ul li a::before{
-  position: absolute;
-  content: '';
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 100%;
-  /* background: white; */
-  transform: scaleX(0);
-  transform-origin: right;
-}
-label #btn,#remove{
-  color: white;
-  font-size: 30px;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
+
 .hero_section nav ul li a{
   text-transform: uppercase;
   color: black;
   font-weight: 700;
 }
-/* .hero_section nav ul li a:hover{
-  color: white;
-} */
+
 .eat{
   height: 300px;
   width: 400px;
@@ -277,6 +233,64 @@ textarea{
   margin-left: 20px;
   margin-bottom: 40px;
 }
+/* cart section */
+.cartImg{
+  width: 80px;
+}
+ i{
+  margin-right: 250px;
+  margin-top: 30px;
+}
+.cartIcon{
+  margin-bottom: 80px;
+  margin-left: 80%;
+}
+.totalItemsInCart{
+  margin-top: -50px;
+  margin-left: 26px;
+  font-size: 25px;
+  text-align: center;
+  background-color: #FAA12F;
+  font-weight: 700;
+  border-radius: 100%;
+  width: 25px;
+  color: white;
+}
+.cartTitle{
+  display: flex;
+  justify-content: space-around;
+}
+.cartSection{
+  display: flex;
+}
+.cartSection div:nth-child(1){
+  margin-left: 100px;
+}
+.cartSection div:nth-child(2){
+margin-left: 180px;
+margin-top: 15px;
+}
+.cartSection div:nth-child(3){
+  margin-left: 240px;
+  margin-top: 15px;
+}
+.units{
+  float: right;
+  margin-top: -85px;
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+}
+.units .plus{
+  font-size: 30px;
+  font-weight: 700;
+}
+.units .minus{
+  font-size: 35px;
+  font-weight: 700;
+}
+
+
 /* media querries */
 @media (max-width: 860px) {
   label #btn, #remove{

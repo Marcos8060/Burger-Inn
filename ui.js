@@ -1,46 +1,51 @@
-class UI{
-  constructor(){
-    this.qPrices = document.getElementById('qTotals');
-    // this.sTotals = document.getElementById('sTotals');
-  }
+class UI {
+   constructor(){
+      this.productsContainer = document.querySelector('.products');
+      this.cartItems = document.querySelector('.cartItems');
+      this.subTotal = document.querySelector('.subtotal');
+   }
 
-  showPrice(qtotal,qcrispy,qstuffed,qgluten,scrispy,sStuffed,sgluten,Tcrispy,Tstuffed,Tgluten,location){
-    this.qPrices.innerHTML = `
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Crust</th>
-          <th scope="col">Size</th>
-          <th scope="col">Quantity</th>
-          <th scope="col">Topping</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Crispy</th>
-          <td>${scrispy}</td>
-          <td>${qcrispy}</</td>
-          <td>${Tcrispy}</td>
-        </tr>
-        <tr>
-          <th scope="row">Stuffed</th>
-          <td>${sStuffed}</td>
-          <td>${qstuffed}</td>
-          <td>${Tstuffed}</td>
-        </tr>
-        <tr>
-          <th scope="row">Gluten Free</th>
-          <td>${sgluten}</td>
-          <td>${qgluten}</td>
-          <td>${Tgluten}</td>
-        </tr>
-        <tr>
-          <th scope="row">Totals</th>
-          <td colspan="2">$${qtotal}</td>
-        </tr>
-      </tbody>
-  </table>
-  <h4>Your order will be delivered in ${location}</h4>
-    `
-  }
+    displayProducts(imgSrc,title,price,size,topping,id){
+       this.productsContainer.innerHTML +=`
+       <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+         <img src=${imgSrc} class="card-img-top" alt="...">
+          <div class="card-body">
+          <p class="card-title">Crust: ${title}</p>
+          <p>Price: $${price}</p>
+          <p>Size: ${size}</p>
+          <label for="cars">Choose topping:</label>
+            <select name="cars" id="cars">
+                <option value="mushroom">${topping}</option>
+                <option value="pepperoni">pepperoni</option>
+                <option value="bacon">bacon</option>
+            </select>
+            <buttton class="button" onClick="addToCart(${id})">Add to cart</button>
+        </div>
+       </div> 
+       `
+    }
+    appendToCart(imgSrc,title,size,price,id,numberOfUnits){
+       this.cartItems.innerHTML += `
+       <div class="cartSection">
+        <div>
+         <img class="cartImg" src=${imgSrc} class="card-img-top" alt="...">
+             <h5>${title}</h5>
+        </div>
+            <div><h5>${size}</h5></div>
+            <div><h5>$${price}</h5></div>
+            </div>
+           <div class="units">
+          <div class="btn minus" onClick="changeNumberOfUnits('minus',${id})">-</div>
+         <div class="number">${numberOfUnits}</div>
+        <div class="btn plus" onClick="changeNumberOfUnits('plus',${id})">+</div>    
+       </div>
+       `
+    }
+    getSubTotal(totalprice,totalUnits){
+       this.subTotal.innerHTML = `
+         Subtotal (${totalUnits} items): $${totalprice}
+       
+       `
+    }
 }
