@@ -57,38 +57,69 @@
                                
                             </div>
                             <div class="modal-footer">
-                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#thirdModal" data-bs-dismiss="modal">Checkout</button>
+                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#thirdModal" data-bs-dismiss="modal">Delivery</button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                         </div>
                     </div>
-                    <!-- second Modal -->
+                    <!-- third Modal -->
                         <!-- Modal -->
-                        <div class="modal fade" id="thirdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
+                        <div class="modal fade" id="fourthModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                 <h4 class="modal-title" id="exampleModalLabel"><span>Summary</span> of Your Order</h4>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                  <h5 class="text-center">Dear esteemed customer, below is a summary for your order.</h5>
                                         <div class="summary">
-                                            <!-- Append Summary Here -->
+                                         
                                         </div>
                                         <div class="total">
-                                            <!-- <h6>Total charged: 1200</h6> -->
+                                            
                                         </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary">Submit</button>
+                                    <button type="button" class="btn btn-secondary lost" onclick="sendAlert()">Submit</button>
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                             </div>
                         </div>
-                    <!-- End of second modal -->
+                    <!-- End of third modal -->
+                    <!-- FOURTH MODAL -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="thirdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                 <!-- modal body -->
+                                 <div class="col">
+                                    <form id="form">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter name...">
+                                        <label for="location">Email</label>
+                                        <input type="email" class="form-control" placeholder="Enter email...">
+                                        <label for="location">Location</label>
+                                        <input id="location" type="text" class="form-control" placeholder="Enter location...">
+                                        <button class="btn btn-secondary mt-3">Submit</button>
+                                    </form>
+                                </div>
+                                 <!-- end of modal body -->
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#fourthModal" data-bs-dismiss="modal">Checkout</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    <!-- END OF FOURTH MODAL -->
               </div>
               
 

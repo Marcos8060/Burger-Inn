@@ -1,8 +1,28 @@
 
+
 // init ui
 const ui = new UI;
 
+const locationInput = document.getElementById('location');
 const unitsInCart = document.querySelector('.totalItemsInCart');
+
+// form event listener
+form.addEventListener('submit',getLocation);
+
+function getLocation(e){
+   if(locationInput.value){
+      alert(`Your order will be delivered to ${locationInput.value}`);
+
+   }
+
+   e.preventDefault();
+}
+
+function sendAlert(e){
+   const btn = e.target;
+   console.log(btn);
+   alert('Thank you for shopping with us, we value you!!')
+}
 
 products.forEach((product)=>{
    ui.displayProducts(product.imgSrc,product.title,product.price,product.size,product.topping,product.id);

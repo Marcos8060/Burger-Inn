@@ -294,14 +294,14 @@ margin-top: 15px;
 }
 .summary{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 .summary div{
   background-color: #FCFBF9;
   padding: 20px;
   border-radius: 10px;
   border: 1px dashed #d68d2d;
-  width: 300px;
+  width: 200px;
   text-align: center;
   margin: 10px;
 }
