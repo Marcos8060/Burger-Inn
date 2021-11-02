@@ -29,18 +29,22 @@ class UI {
     }
     appendToCart(imgSrc,title,size,price,id,numberOfUnits){
        this.cartItems.innerHTML += `
-       <div class="cartSection">
-        <div>
-         <img class="cartImg" src=${imgSrc} class="card-img-top" alt="...">
-             <h5>${title}</h5>
-        </div>
-            <div><h5>${size}</h5></div>
-            <div><h5>$${price}</h5></div>
+       <div>
+        <div class="content">
+            <div>
+                <img class="cartImg" src=${imgSrc}>
             </div>
+            <div class="info">
+                <h5>Crust:${title}</h5>
+               <h5>Size: ${size}</h5>
+                <h5>Price: ${price}</h5>
+           </div>
            <div class="units">
-          <div class="btn minus" onClick="changeNumberOfUnits('minus',${id})">-</div>
-         <div class="number">${numberOfUnits}</div>
-        <div class="btn plus" onClick="changeNumberOfUnits('plus',${id})">+</div>    
+             <div class="btn minus" onClick="changeNumberOfUnits('minus',${id})">-</div>
+             <div class="number">${numberOfUnits}</div>
+             <div class="btn plus" onClick="changeNumberOfUnits('plus',${id})">+</div>    
+           </div>
+         </div>
        </div>
        `
     }
