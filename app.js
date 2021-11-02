@@ -7,12 +7,13 @@ const locationInput = document.getElementById('location');
 const unitsInCart = document.querySelector('.totalItemsInCart');
 
 // form event listener
-form.addEventListener('submit',getLocation);
+form.addEventListener('keyup',getLocation);
 
 function getLocation(e){
+   console.log(locationInput.value);
    if(locationInput.value){
-      alert(`Your order will be delivered to ${locationInput.value}`);
-
+      // alert(`Your order will be delivered to ${locationInput.value}`);
+      ui.appendLocation(locationInput.value);
    }
 
    e.preventDefault();

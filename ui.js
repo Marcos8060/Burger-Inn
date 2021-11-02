@@ -5,6 +5,7 @@ class UI {
       this.subTotal = document.querySelector('.subtotal');
       this.summary = document.querySelector('.summary');
       this.summaryTotals = document.querySelector('.total');
+      this.deliveryLocation = document.querySelector('location');
    }
 
     displayProducts(imgSrc,title,price,size,topping,id){
@@ -67,4 +68,10 @@ class UI {
     appendTotals(totalUnits,totalprice){
        this.summaryTotals.innerHTML = `SUBTOTAL (${totalUnits} items): $${totalprice}`;
     }
+   //  update location
+   appendLocation(location){
+      this.deliveryLocation.innerHTML = `
+         <h5>Your order will be delivered to ${location}</h5>
+      `
+   }
 }
